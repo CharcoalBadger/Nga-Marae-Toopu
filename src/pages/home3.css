@@ -9,7 +9,7 @@
 }
 
 .parallax2 {
-  background-image: url("C:\Users\William\Desktop\nmt-website\public\images\maori-facebook.png");
+  background-image: url("/public/images/maori-facebook.png");
   height: 100%;
   background-attachment: fixed;
   background-position: center;
