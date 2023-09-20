@@ -1,0 +1,47 @@
+.tikangainfo-container {
+  display: flex;
+  flex-direction: column; /* This will stack the children vertically */
+  align-items: center; /* Vertically centers the content */
+  justify-content: center; /* Horizontally centers the content */
+  height: auto; /* Adjust height to content */
+  overflow: hidden;
+  position: relative;
+  padding: 20px 0; /* Add some vertical padding for spacing */
+}
+
+.tikangainfo-title1 {
+  margin-top: 5%;
+  color: var(--body-text);
+  text-align: center;
+}
+
+.tikangainfo-title2 {
+  color: var(--body-text);
+  text-align: center;
+}
+
+.tikangainfo-title3 {
+  color: var(--body-text);
+  text-align: center;
+}
+
+.tikangainfo-para1 {
+  width: 50%;
+  color: var(--body-text);
+  text-align: center;
+  margin-bottom: 5%;
+}
+
+.tikangainfo-para2 {
+  width: 50%;
+  color: var(--body-text);
+  text-align: center;
+  margin-bottom: 5%;
+}
+
+.tikangainfo-para3 {
+  width: 50%;
+  color: var(--body-text);
+  text-align: center;
+  margin-bottom: 5%;
+}

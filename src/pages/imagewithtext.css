@@ -1,0 +1,32 @@
+.iwt-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60vh;
+  padding: 0 15%;
+}
+
+.iwt-image {
+  max-width: 50%;
+  height: auto;
+}
+
+.iwt-text-content {
+  max-width: 40%;
+  padding: 20px;
+}
+
+.iwt-title {
+  color: var(--body-text);
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.iwt-description {
+  color: var(--body-text);
+  font-size: 1.2rem;
+}
+
+.image-right {
+  flex-direction: row-reverse;
+}

@@ -1,0 +1,15 @@
+.hne2-container {
+  display: flex;
+  flex-direction: column; /* This stacks the children vertically */
+  align-items: center; /* Horizontally centers the content */
+  justify-content: center; /* Vertically centers the content */
+  height: 70vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.hne2-title {
+  text-align: center;
+  margin-bottom: 5%;
+  color: var(--body-text);
+}

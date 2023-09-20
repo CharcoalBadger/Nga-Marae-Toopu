@@ -1,0 +1,35 @@
+.home3-container {
+  display: flex;
+  flex-direction: column; /* This stacks the children vertically */
+  align-items: center; /* Horizontally centers the content */
+  justify-content: center; /* Vertically centers the content */
+  height: 50vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.parallax2 {
+  background-image: url("C:\Users\William\Desktop\nmt-website\public\images\maori-facebook.png");
+  height: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  position: absolute; /* This ensures the parallax background covers the entire container */
+  top: 0;
+  left: 0;
+  z-index: -1; /* This ensures the background stays behind the title */
+}
+
+.home3-title {
+  color: var(--body-color);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  z-index: 1; /* This ensures the title stays on top of the background */
+}
+
+.home3-subtitle {
+  color: var(--body-color);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  z-index: 1; /* This ensures the title stays on top of the background */
+}

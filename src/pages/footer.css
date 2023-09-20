@@ -1,0 +1,37 @@
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 15vh;
+  background-color: #00100b;
+  color: white; /* Setting text color to white for better visibility against the dark background */
+  position: relative;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center; /* Aligns items to the bottom */
+  width: 100%; /* Adjust as needed */
+  position: absolute;
+  bottom: 10px; /* Adjust as needed */
+}
+
+.privacy-link,
+.social-media a,
+.credit-link {
+  color: white;
+  text-decoration: none;
+  margin: 0; /* Resetting the default margin */
+}
+
+.privacy-link:hover,
+.social-media a:hover,
+.credit-link:hover {
+  text-decoration: underline;
+}
+
+.facebook-icon {
+  width: 70px; /* Adjust based on your icon size */
+}
