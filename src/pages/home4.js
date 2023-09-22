@@ -1,11 +1,28 @@
-import React from "react";
+import React, { useEffect } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./home4.css";
 import { Calendar, momentLocalizer } from "react-big-calendar";
 import moment from "moment";
 
+gsap.registerPlugin(ScrollTrigger);
+
 const localizer = momentLocalizer(moment);
 
 export default function Home4() {
+  useEffect(() => {
+    gsap.from(".home4-container", {
+      opacity: 0,
+      y: 50,
+      ease: "power1.inOut",
+      scrollTrigger: {
+        trigger: ".home4-container",
+        start: "top 80%",
+        end: "bottom 20%",
+      },
+    });
+  }, []);
+
   const generateRandomDate = (start, end) => {
     return new Date(
       start.getTime() + Math.random() * (end.getTime() - start.getTime())

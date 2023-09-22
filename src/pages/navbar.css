@@ -30,9 +30,11 @@
   color: var(--body-color);
   text-decoration: none;
   padding: 5px 10px;
-  transition: background-color 0.3s, color 0.3s;
+  transition: background-color 0.3s, color 0.3s, text-decoration 0.3s;
 }
 
 .navbar-links a:hover {
   color: var(--body-button); /* Change text color on hover */
+  text-decoration: underline;
+  transition: background-color 0.3s, color 0.3s, text-decoration 0.3s;
 }

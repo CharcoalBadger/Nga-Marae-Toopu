@@ -1,7 +1,44 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./hne3.css";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Hne3() {
+  useEffect(() => {
+    gsap.from(".hne3-title", {
+      y: 50,
+      opacity: 0,
+      ease: "power1.inOut",
+      scrollTrigger: {
+        trigger: ".hne3-title",
+        start: "top 80%",
+      },
+    });
+
+    gsap.from(".event-section h2", {
+      y: 50,
+      opacity: 0,
+      ease: "power1.inOut",
+      scrollTrigger: {
+        trigger: ".event-section",
+        start: "top 80%",
+      },
+    });
+
+    gsap.from(".event-image", {
+      y: 50,
+      opacity: 0,
+      ease: "power1.inOut",
+      stagger: 0.2,
+      scrollTrigger: {
+        trigger: ".events-grid",
+        start: "top 80%",
+      },
+    });
+  }, []);
+
   const events = [
     {
       title: "The Kings Coronation",

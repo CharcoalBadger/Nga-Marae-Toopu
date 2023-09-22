@@ -1,44 +1,43 @@
 .about-container {
   display: flex;
-  align-items: center; /* Vertically centers the content */
-  justify-content: center; /* Horizontally centers the content */
+  align-items: center;
+  justify-content: center;
   height: 70vh;
   overflow: hidden;
   position: relative;
 }
 
 .parallax3 {
-  background-image: url("/public/images/aboutsplash.png");
+  background-image: url("/public/images/test21.png");
   height: 100%;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  position: absolute; /* This ensures the parallax background covers the entire container */
+  position: absolute;
   top: 0;
   left: 0;
-  z-index: -1; /* This ensures the background stays behind the title */
+  z-index: -1;
 }
 
 .about-title {
   color: var(--body-color);
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  z-index: 1; /* This ensures the title stays on top of the background */
+  z-index: 1;
 }
 
 .scroll-arrow {
   position: absolute;
-  bottom: 2%; /* Adjust this value to move the arrow closer or farther from the bottom */
+  bottom: 2%;
   left: 50%;
-  transform: translateX(-50%); /* This centers the arrow horizontally */
+  transform: translateX(-50%);
 }
 
 .scroll-arrow img {
   width: 150px;
 }
 
-/* Optional: Bounce animation for the arrow */
 @keyframes bounce {
   0%,
   20%,

@@ -1,9 +1,35 @@
-import React from "react";
+import React, { useEffect } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import About from "./about";
 import Imagewithtext from "./imagewithtext";
 import Footer from "./footer";
 
+gsap.registerPlugin(ScrollTrigger);
+
 export default function Aboutapp() {
+  useEffect(() => {
+    const targets = document.querySelectorAll(".iwt-image");
+
+    targets.forEach((target) => {
+      const imageOnRight =
+        target.getAttribute("data-image-on-right") === "true";
+      const direction = imageOnRight ? 50 : -50;
+
+      gsap.from(target, {
+        duration: 1,
+        x: direction,
+        opacity: 0,
+        ease: "power1.inOut",
+        scrollTrigger: {
+          trigger: target.closest(".iwt-container"),
+          start: "top 80%",
+          toggleActions: "play none none reverse",
+        },
+      });
+    });
+  }, []);
+
   return (
     <div className="aboutapp-container">
       <About />

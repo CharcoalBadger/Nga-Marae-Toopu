@@ -1,11 +1,37 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./hne2.css";
 import { Calendar, momentLocalizer } from "react-big-calendar";
 import moment from "moment";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const localizer = momentLocalizer(moment);
 
 export default function Hne2() {
+  useEffect(() => {
+    gsap.from(".hne2-title", {
+      y: 50,
+      opacity: 0,
+      ease: "power1.inOut",
+      scrollTrigger: {
+        trigger: ".hne2-title",
+        start: "top 90%",
+      },
+    });
+
+    gsap.from(".rbc-calendar", {
+      y: 50,
+      opacity: 0,
+      ease: "power1.inOut",
+      scrollTrigger: {
+        trigger: ".rbc-calendar",
+        start: "top 90%",
+      },
+    });
+  }, []);
+
   const generateRandomDate = (start, end) => {
     return new Date(
       start.getTime() + Math.random() * (end.getTime() - start.getTime())

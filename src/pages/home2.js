@@ -1,9 +1,26 @@
-import React from "react";
-import { Link } from "react-router-dom";
-
+import React, { useEffect } from "react";
+import gsap from "gsap";
 import "./home2.css";
+import { Link } from "react-router-dom";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Home2() {
+  useEffect(() => {
+    gsap.from(".circle-container", {
+      opacity: 0,
+      y: 50,
+      stagger: 0.3,
+      ease: "power1.inOut",
+      scrollTrigger: {
+        trigger: ".home2-container",
+        start: "top 80%",
+        end: "bottom 20%",
+      },
+    });
+  }, []);
+
   const items = [
     {
       image: "./images/circle1.png",
