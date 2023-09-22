@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import gsap from "gsap";
 import "./hne.css";
-import Navbar from "./navbar";
+import Navbarapp from "./navbarapp";
 
 export default function Hne() {
   useEffect(() => {
@@ -16,7 +16,9 @@ export default function Hne() {
   }, []);
   return (
     <div className="hne-container">
-      <Navbar />
+      <div className="navbarapp-container">
+        <Navbarapp />
+      </div>
       <div className="parallax5"></div>
       <h1 className="hne-title">Hui & Events</h1>
       <div className="scroll-arrow">

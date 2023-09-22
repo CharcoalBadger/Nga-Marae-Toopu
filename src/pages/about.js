@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import gsap from "gsap";
 import "./about.css";
-import Navbar from "./navbar";
+import Navbarapp from "./navbarapp";
 
 export default function About() {
   useEffect(() => {
@@ -16,7 +16,9 @@ export default function About() {
   }, []);
   return (
     <div className="about-container">
-      <Navbar />
+      <div className="navbarapp-container">
+        <Navbarapp />
+      </div>
       <div className="parallax3"></div>
       <h1 className="about-title">About Us</h1>
       <div className="scroll-arrow">

@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import "./home.css";
-import Navbar from "./navbar";
+import Navbarapp from "./navbarapp";
 import gsap from "gsap";
 
 export default function Home() {
@@ -17,7 +17,9 @@ export default function Home() {
 
   return (
     <div className="home-container">
-      <Navbar />
+      <div className="navbarapp-container">
+        <Navbarapp />
+      </div>
       <div className="parallax"></div>
       <h1 className="home-title">Ngaa Marae Toopu</h1>
       <div className="scroll-arrow">

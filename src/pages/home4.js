@@ -1,15 +1,21 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./home4.css";
 import { Calendar, momentLocalizer } from "react-big-calendar";
 import moment from "moment";
+import "react-big-calendar/lib/css/react-big-calendar.css";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const localizer = momentLocalizer(moment);
 
 export default function Home4() {
+  const [defaultView, setDefaultView] = useState(
+    window.innerWidth <= 767 ? "day" : "week"
+  );
+  const calendarHeight = window.innerWidth <= 767 ? "50vh" : "50vh";
+
   useEffect(() => {
     gsap.from(".home4-container", {
       opacity: 0,
@@ -21,6 +27,16 @@ export default function Home4() {
         end: "bottom 20%",
       },
     });
+
+    const handleResize = () => {
+      setDefaultView(window.innerWidth <= 767 ? "day" : "week");
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
 
   const generateRandomDate = (start, end) => {
@@ -72,11 +88,11 @@ export default function Home4() {
       <Calendar
         localizer={localizer}
         defaultDate={new Date()}
-        defaultView="week"
+        defaultView={defaultView}
         views={["week", "day"]}
         events={events}
         onSelectEvent={handleEventClick}
-        style={{ height: "500px", width: "100%" }}
+        style={{ height: calendarHeight, width: "80%" }}
       />
     </div>
   );

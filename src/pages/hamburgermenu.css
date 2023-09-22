@@ -1,0 +1,58 @@
+.hamburger-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 20px 10%; /* Adjust the padding as needed */
+  position: relative;
+}
+
+.hamburger-icon {
+  cursor: pointer;
+  font-size: 24px;
+  z-index: 11;
+}
+
+.hamburger-dropdown {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 60px; /* Adjust based on the height of the hamburger icon and padding */
+  right: 10%; /* Adjust as needed */
+  width: 30%; /* Set a fixed width for the menu */
+  background-color: #fff;
+  border: 1px solid #ccc;
+  z-index: 10;
+  transition: right 0.3s ease-in-out; /* Slide-out transition */
+}
+
+.hamburger-container.active .hamburger-dropdown {
+  right: 10%; /* Show the menu when active */
+}
+
+.hamburger-dropdown a {
+  padding: 10px 20px;
+  text-decoration: none;
+  color: var(--body-text);
+  border-bottom: 1px solid #ccc;
+}
+
+.hamburger-dropdown a:last-child {
+  border-bottom: none;
+}
+
+.hamburger-dropdown a:hover {
+  background-color: #f5f5f5;
+}
+
+.hamburger-logo {
+  width: 25%;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  margin-left: -5%;
+}
+
+.hamburger-logo:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+}

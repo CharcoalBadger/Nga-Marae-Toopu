@@ -53,3 +53,14 @@
     transform: translateX(-50%) translateY(-5px);
   }
 }
+
+/* Mobile Responsiveness */
+@media (max-width: 767px) {
+  .about-title {
+    font-size: 24px; /* Adjust as needed */
+  }
+
+  .scroll-arrow img {
+    width: 80px; /* Adjust as needed */
+  }
+}

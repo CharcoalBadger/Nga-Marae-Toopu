@@ -3,19 +3,19 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 15vh;
+  height: auto;
   background-color: #00100b;
-  color: white; /* Setting text color to white for better visibility against the dark background */
-  position: relative;
+  color: white;
+  min-height: 15vh;
+  padding: 20px 0;
 }
 
 .footer-content {
   display: flex;
   justify-content: space-evenly;
-  align-items: center; /* Aligns items to the bottom */
-  width: 100%; /* Adjust as needed */
-  position: absolute;
-  bottom: 10px; /* Adjust as needed */
+  align-items: center;
+  width: 100%;
+  padding: 10px 0; /* Add some padding to give space above and below the content */
 }
 
 .privacy-link,
@@ -34,4 +34,23 @@
 
 .facebook-icon {
   width: 70px; /* Adjust based on your icon size */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 767px) {
+  .footer-content {
+    flex-direction: column;
+    padding: 20px 0; /* Increase padding for mobile */
+  }
+
+  .left-section,
+  .middle-section,
+  .credit-link {
+    text-align: center;
+    margin-bottom: 10px; /* Add some margin between stacked sections */
+  }
+
+  .facebook-icon {
+    width: 50px;
+  }
 }

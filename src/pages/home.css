@@ -54,3 +54,20 @@
     transform: translateX(-50%) translateY(-5px);
   }
 }
+
+/* Mobile Responsiveness */
+@media (max-width: 767px) {
+  .home-title {
+    font-size: 24px; /* Adjust as needed */
+  }
+
+  .scroll-arrow img {
+    width: 80px; /* Adjust as needed */
+  }
+  .navbarapp-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 12; /* Ensure it's above other elements */
+  }
+}

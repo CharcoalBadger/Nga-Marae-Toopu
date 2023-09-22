@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import gsap from "gsap";
 import "./tikanga.css";
-import Navbar from "./navbar";
+import Navbarapp from "./navbarapp";
 
 export default function Tikanga() {
   useEffect(() => {
@@ -16,7 +16,9 @@ export default function Tikanga() {
   }, []);
   return (
     <div className="tikanga-container">
-      <Navbar />
+      <div className="navbarapp-container">
+        <Navbarapp />
+      </div>
       <div className="parallax4"></div>
       <h1 className="tikanga-title">Tikanga</h1>
       <div className="scroll-arrow">
