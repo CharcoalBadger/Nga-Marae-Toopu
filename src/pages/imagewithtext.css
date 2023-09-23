@@ -30,3 +30,31 @@
 .image-right {
   flex-direction: row-reverse;
 }
+
+/* Mobile Responsiveness */
+@media (max-width: 767px) {
+  .iwt-container {
+    flex-direction: column; /* Stack children vertically */
+    padding: 0 10%; /* Reduce padding */
+    margin-top: 5%;
+    height: auto;
+  }
+
+  .iwt-image,
+  .iwt-text-content {
+    width: 100%;
+    max-width: 100%; /* Allow both image and text content to take full width */
+  }
+
+  .iwt-title {
+    font-size: 1.2rem; /* Adjust font size */
+  }
+
+  .iwt-description {
+    font-size: 1rem; /* Adjust font size */
+  }
+
+  .image-right {
+    flex-direction: column; /* Ensure image is on top even if imageOnRight is true */
+  }
+}

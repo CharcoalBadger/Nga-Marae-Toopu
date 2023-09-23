@@ -33,12 +33,13 @@ h2 {
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
   width: 100%;
-  max-width: 1200px; /* Adjust as needed */
+  max-width: 1200px;
+  margin-bottom: 8rem;
 }
 
 .event-image {
   width: 100%;
-  height: 150px; /* Adjust as needed */
+  height: 150px;
   object-fit: cover;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -47,4 +48,23 @@ h2 {
 
 .event-image:hover {
   transform: scale(1.05);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 767px) {
+  .hne3-title {
+    font-size: 1.2rem; /* Adjust font size */
+  }
+
+  h2 {
+    font-size: 1rem; /* Adjust font size */
+  }
+
+  .events-grid {
+    grid-template-columns: 1fr; /* Stack images vertically on mobile */
+  }
+
+  .event-image {
+    height: 100px; /* Adjust height for mobile */
+  }
 }

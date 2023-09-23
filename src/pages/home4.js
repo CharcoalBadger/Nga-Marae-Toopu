@@ -92,7 +92,7 @@ export default function Home4() {
         views={["week", "day"]}
         events={events}
         onSelectEvent={handleEventClick}
-        style={{ height: calendarHeight, width: "80%" }}
+        style={{ height: calendarHeight, width: "90%" }}
       />
     </div>
   );

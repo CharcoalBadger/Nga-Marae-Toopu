@@ -86,7 +86,7 @@ export default function Hne2() {
         views={["month", "week", "day", "agenda"]}
         events={events}
         onSelectEvent={handleEventClick}
-        style={{ height: "500px", width: "100%" }}
+        style={{ height: "500px", width: "90%" }}
       />
     </div>
   );
