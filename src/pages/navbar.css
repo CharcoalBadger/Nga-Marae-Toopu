@@ -11,7 +11,7 @@
 }
 
 .navbar-logo {
-  width: 30%;
+  width: 50%;
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
 }
@@ -37,4 +37,22 @@
   color: var(--body-button); /* Change text color on hover */
   text-decoration: underline;
   transition: background-color 0.3s, color 0.3s, text-decoration 0.3s;
+}
+
+.navbar-item {
+  display: block;
+  text-align: center;
+}
+
+.navbar-item-text {
+  display: inline-block; /* or block, depending on your layout */
+  text-align: left;
+}
+
+.navbar-item-divider {
+  width: 100%; /* adjust as needed */
+  border: 0;
+  height: 1px;
+  background-color: white; /* or any color you prefer */
+  margin: 5px 0;
 }

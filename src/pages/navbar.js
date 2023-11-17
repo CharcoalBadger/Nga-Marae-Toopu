@@ -22,12 +22,41 @@ export default function Navbar() {
   return (
     <div className="navbar">
       <Link to="/">
-        <img src="./images/nmt-logo.png" alt="Logo" className="navbar-logo" />
+        <img
+          src="./images/nmt-logo-t3.png"
+          alt="Logo"
+          className="navbar-logo"
+        />
       </Link>
       <div className="navbar-links">
-        <Link to="/about">About Us</Link>
-        <Link to="/tikanga">Tikanga</Link>
-        <Link to="/hne">Hui & Events</Link>
+        <Link to="/about" className="navbar-item">
+          <div className="navbar-item-text">
+            About Us
+            <hr className="navbar-item-divider" />
+            <span className="navbar-item-subtext">Whakahaere</span>
+          </div>
+        </Link>
+        <Link to="/tikanga" className="navbar-item">
+          <div className="navbar-item-text">
+            History
+            <hr className="navbar-item-divider" />
+            <span className="navbar-item-subtext">Hitori</span>
+          </div>
+        </Link>
+        <Link to="/hne" className="navbar-item">
+          <div className="navbar-item-text">
+            Events
+            <hr className="navbar-item-divider" />
+            <span className="navbar-item-subtext">Hui</span>
+          </div>
+        </Link>
+        <Link to="/nmt" className="navbar-item">
+          <div className="navbar-item-text">
+            Marae Representatives
+            <hr className="navbar-item-divider" />
+            <span className="navbar-item-subtext">Ngaa Toopu Marae</span>
+          </div>
+        </Link>
       </div>
     </div>
   );

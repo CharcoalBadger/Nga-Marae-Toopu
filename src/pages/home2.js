@@ -25,23 +25,34 @@ export default function Home2() {
     {
       image: "./images/circle1.png",
       title: "ABOUT US",
+      subtext: "WHAKAHAERE",
       description:
         "Discover the heart and soul of our community, our journey, and our shared aspirations.",
       linkName: "about",
     },
     {
       image: "./images/circle2.jpg",
-      title: "TIKANGA",
+      title: "HISTORY",
+      subtext: "HITORI",
       description:
         "Delve into the traditions, values, and practices that guide our way of life.",
       linkName: "tikanga",
     },
     {
       image: "./images/circle3.jpg",
-      title: "HUI & EVENTS",
+      title: "EVENTS",
+      subtext: "HUI",
       description:
         "Stay updated with gatherings, ceremonies, and pivotal moments in our community.",
       linkName: "hne",
+    },
+    {
+      image: "./images/test15.png",
+      title: "MARAE REPRESENTATIVES",
+      subtext: "NGAA TOOPU MARAE",
+      description:
+        "Meet the dedicated guardians of our Marae, bridging traditions and fostering community bonds.",
+      linkName: "nmt",
     },
   ];
 
@@ -58,7 +69,11 @@ export default function Home2() {
               />
             </Link>
           </div>
-          <h3 className="circle-title">{item.title}</h3>
+          <div className="circle-title">
+            {item.title}
+            <hr className="circle-title-divider" />
+            <span className="circle-title-subtext">{item.subtext}</span>
+          </div>
           <p className="circle-description">{item.description}</p>
         </div>
       ))}

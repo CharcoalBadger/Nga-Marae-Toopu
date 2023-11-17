@@ -5,7 +5,7 @@ import Navbarapp from "./navbarapp";
 
 export default function Hne() {
   useEffect(() => {
-    gsap.from(".hne-title", {
+    gsap.from(".hne-title-container", {
       duration: 1.5,
       y: 50,
       opacity: 0,
@@ -20,7 +20,11 @@ export default function Hne() {
         <Navbarapp />
       </div>
       <div className="parallax5"></div>
-      <h1 className="hne-title">Hui & Events</h1>
+      <div className="hne-title-container">
+        <h1 className="hne-title">Events</h1>
+        <hr className="hne-title-divider" />
+        <h1 className="hne-title-subtext">Hui</h1>
+      </div>
       <div className="scroll-arrow">
         <img src="./images/arrow-down.svg" alt="Scroll Down" />
       </div>

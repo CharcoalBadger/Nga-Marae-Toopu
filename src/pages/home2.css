@@ -37,8 +37,29 @@
 }
 
 .circle-title {
-  margin-top: 10px;
+  text-align: center;
   color: var(--body-text);
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+.circle-title-divider {
+  width: 100%;
+  border: 0;
+  height: 1px;
+  background-color: var(--body-text); /* Adjust color as needed */
+  margin: 5px 0;
+}
+
+.circle-title-subtext {
+  display: block; /* Ensures it appears below the title */
+  color: var(--subtext-color); /* Adjust as needed */
+}
+
+/* Hover styles, if necessary */
+.circle-container:hover .circle-title {
+  color: var(--body-button);
+  /* Add other hover styles if needed */
 }
 
 .circle-description {

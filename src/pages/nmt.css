@@ -1,4 +1,4 @@
-.hne-container {
+.nmt-container {
   display: flex;
   align-items: center; /* Vertically centers the content */
   justify-content: center; /* Horizontally centers the content */
@@ -7,8 +7,8 @@
   position: relative;
 }
 
-.parallax5 {
-  background-image: url("/public/images/test20.png");
+.parallax4 {
+  background-image: url("/public/images/tikangasplash.png");
   height: 100%;
   background-attachment: fixed;
   background-position: center;
@@ -21,12 +21,12 @@
   z-index: -1; /* This ensures the background stays behind the title */
 }
 
-.hne-title-container {
+.nmt-title-container {
   text-align: center;
   margin-top: 20px;
 }
 
-.hne-title-divider {
+.nmt-title-divider {
   width: 100%;
   border: 0;
   height: 1px;
@@ -36,11 +36,11 @@
   margin: 10px 0;
 }
 
-.hne-title-subtext {
+.nmt-title-subtext {
   color: var(--body-color); /* Adjust as needed */
 }
 
-.hne-title {
+.nmt-title {
   color: var(--body-color);
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   z-index: 1;
@@ -76,7 +76,7 @@
 
 /* Mobile Responsiveness */
 @media (max-width: 767px) {
-  .hne-title {
+  .nmt-title {
     font-size: 24px; /* Adjust as needed */
   }
 

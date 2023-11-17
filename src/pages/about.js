@@ -5,7 +5,7 @@ import Navbarapp from "./navbarapp";
 
 export default function About() {
   useEffect(() => {
-    gsap.from(".about-title", {
+    gsap.from(".about-title-container", {
       duration: 1.5,
       y: 50,
       opacity: 0,
@@ -20,7 +20,11 @@ export default function About() {
         <Navbarapp />
       </div>
       <div className="parallax3"></div>
-      <h1 className="about-title">About Us</h1>
+      <div className="about-title-container">
+        <h1 className="about-title">About Us</h1>
+        <hr className="about-title-divider" />
+        <h1 className="about-title-subtext">Whakahaere</h1>
+      </div>
       <div className="scroll-arrow">
         <img src="./images/arrow-down.svg" alt="Scroll Down" />
       </div>

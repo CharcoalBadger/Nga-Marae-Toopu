@@ -9,6 +9,7 @@ import Footer from "./pages/footer";
 import Aboutapp from "./pages/aboutapp";
 import Tikangaapp from "./pages/tikangaapp";
 import Hneapp from "./pages/hneapp";
+import NMTapp from "./pages/nmtapp";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/about" element={<Aboutapp />} />
           <Route path="/tikanga" element={<Tikangaapp />} />
           <Route path="/hne" element={<Hneapp />} />
+          <Route path="/nmt" element={<NMTapp />} />
           <Route
             path="/"
             element={

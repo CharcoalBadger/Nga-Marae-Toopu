@@ -21,10 +21,29 @@
   z-index: -1; /* This ensures the background stays behind the title */
 }
 
+.tikanga-title-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.tikanga-title-divider {
+  width: 100%;
+  border: 0;
+  height: 1px;
+  background-color: var(
+    --body-color
+  ); /* Or color matching your navbar divider */
+  margin: 10px 0;
+}
+
+.tikanga-title-subtext {
+  color: var(--body-color); /* Adjust as needed */
+}
+
 .tikanga-title {
   color: var(--body-color);
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  z-index: 1; /* This ensures the title stays on top of the background */
+  z-index: 1;
 }
 
 .scroll-arrow {

@@ -21,6 +21,25 @@
   z-index: -1;
 }
 
+.about-title-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.about-title-divider {
+  width: 100%;
+  border: 0;
+  height: 1px;
+  background-color: var(
+    --body-color
+  ); /* Or color matching your navbar divider */
+  margin: 10px 0;
+}
+
+.about-title-subtext {
+  color: var(--body-color); /* Adjust as needed */
+}
+
 .about-title {
   color: var(--body-color);
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
