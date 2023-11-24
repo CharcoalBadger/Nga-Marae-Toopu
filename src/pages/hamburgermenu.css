@@ -16,18 +16,19 @@
 .hamburger-dropdown {
   display: flex;
   flex-direction: column;
-  position: absolute;
-  top: 60px; /* Adjust based on the height of the hamburger icon and padding */
-  right: 10%; /* Adjust as needed */
-  width: 30%; /* Set a fixed width for the menu */
+  position: fixed; /* Changed to fixed for full height */
+  top: 0;
+  right: -100%; /* Off screen initially */
+  height: 100%; /* Full height */
+  width: 250px; /* Adjust width as needed */
   background-color: #fff;
-  border: 1px solid #ccc;
+  border-right: 1px solid #ccc;
   z-index: 10;
-  transition: right 0.3s ease-in-out; /* Slide-out transition */
+  transition: right 3s ease-in-out; /* Slide-out transition */
 }
 
 .hamburger-container.active .hamburger-dropdown {
-  right: 10%; /* Show the menu when active */
+  right: 0; /* Slide in */
 }
 
 .hamburger-dropdown a {
