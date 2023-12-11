@@ -25,11 +25,12 @@
 /* Modal Styling */
 .modal {
   background-color: white;
-  padding: 20px;
+  padding: 40px 20px 20px; /* Increased top padding */
   border-radius: 5px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
   z-index: 11; /* Above the backdrop */
   color: black; /* Ensure text is black */
+  position: relative;
 }
 
 /* Style for text inside the modal */
@@ -38,8 +39,11 @@
 }
 
 /* Close Button Styling */
+/* Close Button Styling */
 .modal button {
-  margin-top: 10px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
   padding: 5px 10px;
   background-color: #dc0209; /* Red background */
   color: white;
