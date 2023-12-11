@@ -10,6 +10,10 @@ import Aboutapp from "./pages/aboutapp";
 import Tikangaapp from "./pages/tikangaapp";
 import Hneapp from "./pages/hneapp";
 import NMTapp from "./pages/nmtapp";
+import PrivacyPolicy from "./pages/privacypolicy";
+import CookiePolicy from "./pages/cookiepolicy";
+import AccessibilityStatement from "./pages/accessibilitystatement";
+import Disclaimer from "./pages/disclaimer";
 
 function App() {
   return (
@@ -20,6 +24,13 @@ function App() {
           <Route path="/tikanga" element={<Tikangaapp />} />
           <Route path="/hne" element={<Hneapp />} />
           <Route path="/nmt" element={<NMTapp />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/cookie-policy" element={<CookiePolicy />} />
+          <Route path="/disclaimer" element={<Disclaimer />} />
+          <Route
+            path="/accessibility-statement"
+            element={<AccessibilityStatement />}
+          />
           <Route
             path="/"
             element={

@@ -1,56 +1,84 @@
-import React, { useRef, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./hamburgermenu.css";
 
-export default function HamburgerMenu({ isActive, toggleMenu }) {
-  const menuRef = useRef();
+export default function HamburgerMenu() {
+  const [isActive, setIsActive] = useState(false);
+
+  const toggleMenu = () => {
+    setIsActive(!isActive);
+  };
 
   useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (menuRef.current && !menuRef.current.contains(event.target)) {
-        toggleMenu();
+    const handleOutsideClick = (event) => {
+      // If the click is outside the menu and the menu is active, close it
+      if (!event.target.closest("#menuToggle") && isActive) {
+        setIsActive(false);
       }
     };
 
-    // Add event listener when the menu is active
-    if (isActive) {
-      document.addEventListener("mousedown", handleClickOutside);
-    }
+    // Add the event listener
+    window.addEventListener("click", handleOutsideClick);
 
-    // Cleanup
+    // Cleanup the event listener
     return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
+      window.removeEventListener("click", handleOutsideClick);
     };
-  }, [isActive, toggleMenu]);
+  }, [isActive]); // Only re-run if isActive changes
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const blackBand = document.querySelector(".blackband");
+      if (window.scrollY > 250) {
+        blackBand.classList.add("scrolled");
+      } else {
+        blackBand.classList.remove("scrolled");
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
-    <div className={`hamburger-container ${isActive ? "active" : ""}`}>
+    <div className="hamburger-container">
+      <div className="blackband"></div>
       <Link to="/">
         <img
-          src="./images/nmt-logo.png"
+          src="./images/nmt-logo-t3.png"
           alt="Logo"
           className="hamburger-logo"
         />
       </Link>
-      <div className="hamburger-icon" onClick={toggleMenu}>
-        ☰
-      </div>
-      {isActive && (
-        <div ref={menuRef} className="hamburger-dropdown">
+      <div id="menuToggle">
+        <input
+          type="checkbox"
+          onClick={toggleMenu}
+          checked={isActive}
+          readOnly
+        />
+        <span></span>
+        <span></span>
+        <span></span>
+        <div className="hamburger-dropdown">
           <Link to="/about" onClick={toggleMenu}>
-            About Us
+            About Us <div className="dropdown-separator"></div> Whakahaere
           </Link>
           <Link to="/tikanga" onClick={toggleMenu}>
-            Tikanga
+            History <div className="dropdown-separator"></div> Hitori
           </Link>
           <Link to="/hne" onClick={toggleMenu}>
-            Hui & Events
+            Events <div className="dropdown-separator"></div> Hui
           </Link>
           <Link to="/nmt" onClick={toggleMenu}>
-            Marae Representatives
+            Marae Representatives <div className="dropdown-separator"></div>{" "}
+            Ngaa Toopu Marae
           </Link>
         </div>
-      )}
+      </div>
     </div>
   );
 }

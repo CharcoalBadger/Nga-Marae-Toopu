@@ -1,0 +1,32 @@
+.cookie-policy-container {
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 800px; /* Adjust width as necessary */
+  background-color: #f9f9f9; /* Light background for readability */
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+.cookie-policy-container h1 {
+  color: #333333; /* Dark color for headers */
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.cookie-policy-container p,
+.cookie-policy-container ul {
+  color: #555555; /* Slightly lighter color for text */
+  line-height: 1.6; /* Spacing for readability */
+  font-size: 16px; /* Adjust font size as needed */
+}
+
+.cookie-policy-container ul {
+  padding-left: 20px; /* Indent for lists */
+  list-style-type: disc; /* Bullet points for lists */
+}
+
+.cookie-policy-container h2 {
+  color: #333333; /* Dark color for subheaders */
+  margin-top: 20px;
+  margin-bottom: 10px;
+}

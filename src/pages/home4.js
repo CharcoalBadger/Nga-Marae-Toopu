@@ -1,20 +1,26 @@
 import React, { useEffect, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import FullCalendar from "@fullcalendar/react";
+import dayGridPlugin from "@fullcalendar/daygrid";
+import timeGridPlugin from "@fullcalendar/timegrid";
+import interactionPlugin from "@fullcalendar/interaction";
 import "./home4.css";
-import { Calendar, momentLocalizer } from "react-big-calendar";
-import moment from "moment";
-import "react-big-calendar/lib/css/react-big-calendar.css";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const localizer = momentLocalizer(moment);
-
 export default function Home4() {
-  const [defaultView, setDefaultView] = useState(
-    window.innerWidth <= 767 ? "day" : "week"
-  );
-  const calendarHeight = window.innerWidth <= 767 ? "50vh" : "50vh";
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedEvent, setSelectedEvent] = useState(null);
+
+  const handleEventClick = (clickInfo) => {
+    setSelectedEvent({
+      title: clickInfo.event.title,
+      start: clickInfo.event.start.toLocaleString(), // Formatting to a readable string
+      end: clickInfo.event.end.toLocaleString(),
+    });
+    setIsModalOpen(true);
+  };
 
   useEffect(() => {
     gsap.from(".home4-container", {
@@ -27,16 +33,6 @@ export default function Home4() {
         end: "bottom 20%",
       },
     });
-
-    const handleResize = () => {
-      setDefaultView(window.innerWidth <= 767 ? "day" : "week");
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
   }, []);
 
   const generateRandomDate = (start, end) => {
@@ -68,32 +64,35 @@ export default function Home4() {
     "Conclave with Ngaati Koata",
   ];
 
-  const events = Array.from({ length: 20 }).map(() => {
-    const randomDate = generateRandomDate(new Date(), new Date("2023-12-31"));
-    const randomEventName =
-      eventNames[Math.floor(Math.random() * eventNames.length)];
+  const events = eventNames.map((name) => {
+    const randomStart = generateRandomDate(new Date(), new Date(2024, 11, 31)); // Generate a random date up to the end of 2024
+    const randomEnd = new Date(randomStart.getTime() + 2 * 3600 * 1000); // 2 hours duration for each event
     return {
-      start: randomDate,
-      end: new Date(moment(randomDate).add(1, "days")),
-      title: randomEventName,
+      title: name,
+      start: randomStart,
+      end: randomEnd,
     };
   });
 
-  const handleEventClick = (event) => {
-    alert(`Event: ${event.title}\nStart: ${event.start}\nEnd: ${event.end}`);
-  };
-
   return (
     <div className="home4-container">
-      <Calendar
-        localizer={localizer}
-        defaultDate={new Date()}
-        defaultView={defaultView}
-        views={["week", "day"]}
+      <FullCalendar
+        plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
+        initialView="dayGridMonth"
         events={events}
-        onSelectEvent={handleEventClick}
-        style={{ height: calendarHeight, width: "90%" }}
+        eventClick={handleEventClick}
+        height="auto"
       />
+      {isModalOpen && (
+        <div className="modal-backdrop">
+          <div className="modal">
+            <h2>{selectedEvent.title}</h2>
+            <p>Start: {selectedEvent.start.toString()}</p>
+            <p>End: {selectedEvent.end.toString()}</p>
+            <button onClick={() => setIsModalOpen(false)}>Close</button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

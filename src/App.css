@@ -7,6 +7,8 @@
   --body-color: #fafafa;
   --body-button: #a20207;
   --body-accent: #dc0209;
+  --body-button-rgb: 162, 2, 7;
+  --body-accent-rgb: 220, 2, 9;
   --body-text: #00100b;
   --body-filter: brightness(100%);
 

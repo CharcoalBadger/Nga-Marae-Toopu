@@ -6,10 +6,23 @@ export default function Footer() {
     <div className="footer-container">
       <div className="footer-content footer-animate">
         <div className="left-section footer-animate">
-          <a href="/privacy-policy" className="privacy-link footer-animate">
+          <a
+            href="/privacy-policy"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="privacy-link footer-animate"
+          >
             Privacy Policy
           </a>
-          <p className="footer-animate">
+          <a
+            href="/cookie-policy"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="cookie-link footer-animate"
+          >
+            Cookie Policy
+          </a>
+          <p className="copyright-link footer-animate">
             &copy; {new Date().getFullYear()} Ngaa Marae Toopu. All rights
             reserved.
           </p>
@@ -31,9 +44,32 @@ export default function Footer() {
             </a>
           </div>
         </div>
-        <a href="/credit" className="credit-link footer-animate">
-          Designed & Developed by William Douglas
-        </a>
+        <div className="right-section footer-animate">
+          <a
+            href="/accessibility-statement"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="access-link footer-animate"
+          >
+            Accessibility Statement
+          </a>
+          <a
+            href="/disclaimer"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="disclaimer-link footer-animate"
+          >
+            Disclaimer
+          </a>
+          <a
+            href="https://williamdouglasportfolio.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="credit-link footer-animate"
+          >
+            Designed & Developed by William Douglas
+          </a>
+        </div>
       </div>
     </div>
   );

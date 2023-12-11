@@ -12,13 +12,36 @@
 
 .footer-content {
   display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  width: 100%;
-  padding: 10px 0; /* Add some padding to give space above and below the content */
+  justify-content: space-between; /* Updated from 'space-evenly' for better control */
+  align-items: flex-start; /* Align items to the start for better control */
+  width: 80%;
+  max-width: 100%;
+  padding: 10px 0;
+  margin: 0 auto;
+}
+
+.left-section,
+.middle-section,
+.right-section {
+  display: flex;
+  flex-direction: column; /* Align items vertically */
+  align-items: center; /* Center items horizontally */
+}
+
+.left-section a,
+.right-section a,
+.left-section p {
+  margin-bottom: 20px; /* Consistent 10px space below each element */
+}
+
+.left-section p {
+  margin-top: 0px;
 }
 
 .privacy-link,
+.disclaimer-link,
+.access-link,
+.cookie-link,
 .social-media a,
 .credit-link {
   color: white;
@@ -27,6 +50,9 @@
 }
 
 .privacy-link:hover,
+.disclaimer-link:hover,
+.cookie-link:hover,
+.access-link:hover,
 .social-media a:hover,
 .credit-link:hover {
   text-decoration: underline;
@@ -39,18 +65,26 @@
 /* Mobile Responsiveness */
 @media (max-width: 767px) {
   .footer-content {
-    flex-direction: column;
-    padding: 20px 0; /* Increase padding for mobile */
+    display: grid; /* Switch to grid layout */
+    grid-template-rows: repeat(4, auto); /* Create rows for each section */
+    gap: 10px; /* Space between rows */
+    padding: 20px 0;
+    text-align: center;
   }
 
-  .left-section,
-  .middle-section,
-  .credit-link {
-    text-align: center;
-    margin-bottom: 10px; /* Add some margin between stacked sections */
+  .middle-section {
+    grid-row: 1; /* FOLLOW US and Facebook button */
+  }
+
+  .left-section {
+    grid-row: 2; /* Privacy Policy and Cookie Policy */
+  }
+
+  .right-section {
+    grid-row: 3 / 5; /* Accessibility Statement, Disclaimer, Designed by, and Copyright */
   }
 
   .facebook-icon {
-    width: 50px;
+    width: 50px; /* Adjust icon size for mobile */
   }
 }
