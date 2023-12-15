@@ -14,10 +14,12 @@ import PrivacyPolicy from "./pages/privacypolicy";
 import CookiePolicy from "./pages/cookiepolicy";
 import AccessibilityStatement from "./pages/accessibilitystatement";
 import Disclaimer from "./pages/disclaimer";
+import ScrollToTop from "./pages/scrolltotop";
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <div>
         <Routes>
           <Route path="/about" element={<Aboutapp />} />

@@ -10,6 +10,11 @@
 
 .hne2-title {
   text-align: center;
+  margin-top: 5%;
   margin-bottom: 5%;
+  color: var(--body-text);
+}
+
+.fc-toolbar-title {
   color: var(--body-text);
 }

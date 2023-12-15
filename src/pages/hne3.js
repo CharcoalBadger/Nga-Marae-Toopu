@@ -1,16 +1,20 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import "./hne3.css";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+// import Slider from "react-slick";
+// import "slick-carousel/slick/slick.css";
+// import "slick-carousel/slick/slick-theme.css";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Hne3() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedImages, setSelectedImages] = useState([]);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  const touchStart = useRef(0);
+  const touchEnd = useRef(0);
 
   useEffect(() => {
     gsap.from(".hne3-title", {
@@ -19,27 +23,6 @@ export default function Hne3() {
       ease: "power1.inOut",
       scrollTrigger: {
         trigger: ".hne3-title",
-        start: "top 80%",
-      },
-    });
-
-    gsap.from(".event-section h2", {
-      y: 50,
-      opacity: 0,
-      ease: "power1.inOut",
-      scrollTrigger: {
-        trigger: ".event-section",
-        start: "top 80%",
-      },
-    });
-
-    gsap.from(".event-image", {
-      y: 50,
-      opacity: 0,
-      ease: "power1.inOut",
-      stagger: 0.2,
-      scrollTrigger: {
-        trigger: ".events-grid",
         start: "top 80%",
       },
     });
@@ -58,6 +41,7 @@ export default function Hne3() {
         "./images/hne7.jpg",
         "./images/hne8.jpg",
         "./images/test23.jpg",
+        "./images/test24.jpg",
       ],
     },
     {
@@ -72,6 +56,7 @@ export default function Hne3() {
         "./images/hne7.jpg",
         "./images/hne8.jpg",
         "./images/test23.jpg",
+        "./images/test24.jpg",
       ],
     },
     {
@@ -86,66 +71,102 @@ export default function Hne3() {
         "./images/hne7.jpg",
         "./images/hne8.jpg",
         "./images/test23.jpg",
+        "./images/test24.jpg",
       ],
     },
   ];
 
   const handleAlbumClick = (images) => {
     setSelectedImages(images);
+    setCurrentImageIndex(0);
     setIsModalOpen(true);
   };
 
-  const CustomPrevArrow = (props) => (
-    <div className="custom-prev-arrow" onClick={props.onClick}>
-      Prev
-    </div>
-  );
+  const handleSwipe = (direction) => {
+    let newIndex = currentImageIndex;
+    if (direction === "left") {
+      newIndex =
+        currentImageIndex + 1 < selectedImages.length
+          ? currentImageIndex + 1
+          : 0;
+    } else {
+      newIndex =
+        currentImageIndex - 1 >= 0
+          ? currentImageIndex - 1
+          : selectedImages.length - 1;
+    }
+    setCurrentImageIndex(newIndex);
+  };
 
-  const CustomNextArrow = (props) => (
-    <div className="custom-next-arrow" onClick={props.onClick}>
-      Next
-    </div>
-  );
+  // Function to handle the next image
+  const nextImage = () => {
+    setCurrentImageIndex((prevIndex) =>
+      prevIndex + 1 < selectedImages.length ? prevIndex + 1 : 0
+    );
+  };
+
+  // Function to handle the previous image
+  const prevImage = () => {
+    setCurrentImageIndex((prevIndex) =>
+      prevIndex - 1 >= 0 ? prevIndex - 1 : selectedImages.length - 1
+    );
+  };
 
   return (
     <div className="hne3-container">
       <h2 className="hne3-title">Past Hui & Events</h2>
-      {events.map((event, index) => (
-        <div key={index} className="event-section">
-          {/* Event title as a clickable element */}
+      <div className="events-grid">
+        {events.map((event, index) => (
           <button
+            key={index}
             className="event-title-button"
             onClick={() => handleAlbumClick(event.images)}
           >
             {event.title}
           </button>
-        </div>
-      ))}
+        ))}
+      </div>
 
-      {/* Modal for displaying selected album */}
       {isModalOpen && (
-        <div className="modal-backdrop">
-          <div className="modal">
-            <Slider
-              prevArrow={<CustomPrevArrow />}
-              nextArrow={<CustomNextArrow />}
-              dots={true}
-              infinite={true}
-              speed={500}
-              slidesToShow={1} // Number of images to show at once
-              slidesToScroll={1} // Number of images to scroll when navigating
+        <div
+          className="image-modal-backing"
+          onClick={() => setIsModalOpen(false)}
+        >
+          <div
+            className="image-modal-main"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Left arrow for previous image */}
+            <button className="image-point-left" onClick={prevImage}>
+              &lt;
+            </button>
+            <img
+              src={selectedImages[currentImageIndex]}
+              alt="Current Slide"
+              className="modal-image"
+              onTouchStart={(e) => (touchStart.current = e.touches[0].clientX)}
+              onTouchMove={(e) => (touchEnd.current = e.touches[0].clientX)}
+              onTouchEnd={() => {
+                if (touchStart.current - touchEnd.current > 150) {
+                  handleSwipe("left");
+                } else if (touchStart.current - touchEnd.current < -150) {
+                  handleSwipe("right");
+                }
+              }}
+            />
+            <span className="photo-count">
+              {currentImageIndex + 1} of {selectedImages.length}
+            </span>
+            <button
+              className="image-modal-close-button"
+              onClick={() => setIsModalOpen(false)}
             >
-              {selectedImages.map((image, index) => (
-                <div key={index} className="image-slide-container">
-                  <img
-                    src={image}
-                    alt={`Slide ${index}`}
-                    className="modal-image"
-                  />
-                </div>
-              ))}
-            </Slider>
-            <button onClick={() => setIsModalOpen(false)}>Close</button>
+              ×
+            </button>
+            {/* Right arrow for next image */}
+            <button className="image-point-right" onClick={nextImage}>
+              &gt;
+            </button>
           </div>
         </div>
       )}

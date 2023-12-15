@@ -32,16 +32,6 @@ export default function Hne2() {
         start: "top 90%",
       },
     });
-
-    gsap.from(".rbc-calendar", {
-      y: 50,
-      opacity: 0,
-      ease: "power1.inOut",
-      scrollTrigger: {
-        trigger: ".rbc-calendar",
-        start: "top 90%",
-      },
-    });
   }, []);
 
   const generateRandomDate = (start, end) => {
