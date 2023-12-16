@@ -105,6 +105,14 @@
     padding: 0; /* Remove padding to control the size */
   }
 
+  .image-point-left:hover {
+    transform: translateY(25px);
+  }
+
+  .image-point-right:hover {
+    transform: translateY(25px);
+  }
+
   .image-point-left {
     left: 10px; /* Positioning arrow on the left */
   }
