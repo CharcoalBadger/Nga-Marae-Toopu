@@ -63,13 +63,15 @@
 }
 
 /* Mobile Responsiveness */
-@media (max-width: 767px) {
+@media (max-width: 1024px) {
   .footer-content {
     display: grid; /* Switch to grid layout */
     grid-template-rows: repeat(4, auto); /* Create rows for each section */
     gap: 10px; /* Space between rows */
     padding: 20px 0;
     text-align: center;
+    align-items: center;
+    justify-content: center;
   }
 
   .middle-section {

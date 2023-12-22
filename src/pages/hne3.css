@@ -1,11 +1,13 @@
 .hne3-container {
   padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   text-align: center;
 }
 
 .hne3-title {
-  margin-top: 2%;
-  margin-bottom: 2%;
   color: black;
 }
 
@@ -81,7 +83,7 @@
 /* Media Query for larger screens - typically tablets and desktops */
 @media (min-width: 768px) {
   .image-modal-main {
-    padding: 5%;
+    padding: 10%;
   }
   /* Styles for navigation arrows */
   .image-point-left,

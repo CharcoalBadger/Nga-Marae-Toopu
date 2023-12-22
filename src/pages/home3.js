@@ -23,7 +23,7 @@ export default function Home3() {
   return (
     <div className="home3-container">
       <div className="parallax2 "></div>
-      <h1 className="home3-title home3-animate">Join The Whanau</h1>
+      <h1 className="home3-title home3-animate">Join The Whaanau</h1>
       <h2 className="home3-subtitle home3-animate">
         Click below and join us on Facebook
       </h2>

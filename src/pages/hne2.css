@@ -3,18 +3,28 @@
   flex-direction: column; /* This stacks the children vertically */
   align-items: center; /* Horizontally centers the content */
   justify-content: center; /* Vertically centers the content */
-  height: 70vh;
+  height: 100%;
   overflow: hidden;
   position: relative;
 }
 
 .hne2-title {
   text-align: center;
-  margin-top: 5%;
-  margin-bottom: 5%;
   color: var(--body-text);
 }
 
 .fc-toolbar-title {
   color: var(--body-text);
+}
+
+@media (max-width: 600px) {
+  .hne2-container {
+    margin-top: 5%;
+  }
+}
+
+@media (max-width: 320px) {
+  .hne2-container {
+    margin-top: 5%;
+  }
 }

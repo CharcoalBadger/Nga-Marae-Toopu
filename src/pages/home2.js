@@ -48,10 +48,10 @@ export default function Home2() {
     },
     {
       image: "./images/test15.png",
-      title: "MARAE REPRESENTATIVES",
+      title: "MARAE REPS",
       subtext: "NGAA TOOPU MARAE",
       description:
-        "Meet the dedicated guardians of our Marae, bridging traditions and fostering community bonds.",
+        "Meet the dedicated guardians of our Marae, protectors of our way of life.",
       linkName: "nmt",
     },
   ];

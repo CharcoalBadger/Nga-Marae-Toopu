@@ -132,9 +132,31 @@
 .hamburger-dropdown a:hover {
   background-color: #f5f5f5;
 }
+
 .dropdown-separator {
   height: 1px;
   width: 40%;
   background-color: var(--body-accent); /* Or any color you prefer */
   margin: 10px 0; /* Adjust spacing as needed */
+}
+
+/* Style adjustments for mobile view */
+@media (min-width: 400px) {
+  .blackband {
+    height: 200px; /* Adjust as per your design */
+  }
+}
+
+/* Style adjustments for mobile view */
+@media (min-width: 700px) {
+  .blackband {
+    height: 300px; /* Adjust as per your design */
+  }
+}
+
+/* Style adjustments for mobile view */
+@media (min-width: 930px) {
+  .blackband {
+    height: 350px; /* Adjust as per your design */
+  }
 }

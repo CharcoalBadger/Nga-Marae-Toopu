@@ -3,6 +3,7 @@
   flex-direction: column; /* This stacks the children vertically */
   align-items: center; /* Horizontally centers the content */
   justify-content: center; /* Vertically centers the content */
+  text-align: center;
   height: 50vh;
   overflow: hidden;
   position: relative;

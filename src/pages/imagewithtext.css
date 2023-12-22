@@ -32,7 +32,7 @@
 }
 
 /* Mobile Responsiveness */
-@media (max-width: 767px) {
+@media (max-width: 1024px) {
   .iwt-container {
     flex-direction: column; /* Stack children vertically */
     padding: 0 10%; /* Reduce padding */
