@@ -81,7 +81,7 @@
 }
 
 /* Media Query for larger screens - typically tablets and desktops */
-@media (min-width: 768px) {
+@media (min-width: 1200px) {
   .image-modal-main {
     padding: 10%;
   }
@@ -121,5 +121,12 @@
 
   .image-point-right {
     right: 10px; /* Positioning arrow on the right */
+  }
+
+  .image-point-left,
+  .image-point-right,
+  .image-modal-close-button {
+    outline: none; /* Removes the default outline */
+    box-shadow: none; /* Removes any default box shadow if present */
   }
 }

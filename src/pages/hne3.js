@@ -80,6 +80,14 @@ export default function Hne3() {
     setSelectedImages(images);
     setCurrentImageIndex(0);
     setIsModalOpen(true);
+    // Prevent scrolling on body
+    document.body.style.overflow = "hidden";
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    // Re-enable scrolling on body
+    document.body.style.overflow = "auto";
   };
 
   const handleSwipe = (direction) => {
@@ -128,10 +136,7 @@ export default function Hne3() {
       </div>
 
       {isModalOpen && (
-        <div
-          className="image-modal-backing"
-          onClick={() => setIsModalOpen(false)}
-        >
+        <div className="image-modal-backing" onClick={closeModal}>
           <div
             className="image-modal-main"
             onClick={(e) => e.stopPropagation()}
@@ -157,10 +162,7 @@ export default function Hne3() {
             <span className="photo-count">
               {currentImageIndex + 1} of {selectedImages.length}
             </span>
-            <button
-              className="image-modal-close-button"
-              onClick={() => setIsModalOpen(false)}
-            >
+            <button className="image-modal-close-button" onClick={closeModal}>
               ×
             </button>
             {/* Right arrow for next image */}
