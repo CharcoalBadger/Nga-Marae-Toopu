@@ -67,11 +67,36 @@
   color: var(--body-text);
 }
 
+.circle-title,
+.circle-title-subtext,
+.circle-description {
+  /* Adding a fixed height might help uniformity */
+  /* Adjust the heights as needed */
+  height: 5rem; /* Example height for titles */
+  display: block; /* Ensures full width and proper alignment */
+}
+
+.circle-title-subtext {
+  height: 2rem; /* Example height for subtext */
+}
+
+.circle-description {
+  height: 5rem; /* Example height for descriptions */
+  margin-top: 5px;
+}
+
 /* Mobile Responsiveness */
 @media (max-width: 767px) {
   .circle-container {
     width: 80%;
     margin: 20px auto;
+  }
+
+  .circle-title,
+  .circle-title-subtext,
+  .circle-description {
+    /* Adjust heights for mobile view */
+    height: auto; /* You might want to make it auto or adjust as needed */
   }
 
   .circle-title {

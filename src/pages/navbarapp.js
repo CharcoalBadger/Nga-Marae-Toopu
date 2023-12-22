@@ -3,12 +3,12 @@ import Navbar from "./navbar";
 import HamburgerMenu from "./hamburgermenu";
 
 export default function Navbarapp() {
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 1024);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 1200);
   const [menuActive, setMenuActive] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 1024);
+      setIsMobile(window.innerWidth <= 1200);
     };
 
     window.addEventListener("resize", handleResize);
