@@ -1,45 +1,98 @@
+/* Container Style */
 .tikangainfo-container {
+  max-width: 70%;
+  margin: 20px auto;
+  padding: 20px;
+  background: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+}
+
+/* Text Column */
+.tikangainfo-content {
+  flex-basis: 70%; /* Allocate 70% width of the container */
+}
+
+/* Image Column */
+.tikangainfo-images {
+  flex: 1; /* Allocate space for images */
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: center; /* Center-align images */
+  justify-content: flex-start; /* Align images to the top */
+}
+
+/* Image Styling */
+.tikangainfo-image,
+.tikangainfo-image2 {
+  flex-basis: 30%; /* Allocate 30% width of the container */
+  max-width: 30%; /* Maximum width for images */
   height: auto;
-  overflow: hidden;
-  position: relative;
-  padding: 20px 0;
+  border-radius: 8px;
+  margin-left: 5%;
 }
 
-.tikangainfo-title1,
-.tikangainfo-title2,
-.tikangainfo-title3 {
-  margin-top: 5%;
-  color: var(--body-text);
-  text-align: center;
-  width: 50%; /* Adjusted for better width management */
+/* Typography and Text Styling */
+.tikangainfo-title {
+  margin-top: 1rem;
+  color: #333;
+  text-align: left; /* Align text to the left */
 }
 
-.tikangainfo-para1,
-.tikangainfo-para2,
-.tikangainfo-para3 {
-  width: 50%; /* Adjusted for better width management */
-  color: var(--body-text);
-  text-align: center;
-  margin-bottom: 5%;
+.tikangainfo-text,
+.tikangainfo-subpara {
+  color: #555;
+  text-align: justify;
+  margin-bottom: 1rem;
 }
 
-/* Mobile Responsiveness */
+.tikangainfo-subtitle {
+  margin-top: 1.5rem;
+  color: #333;
+  text-align: left; /* Align subtitles to the left */
+}
+
+/* Section Styling */
+.tikangainfo-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 20px 0;
+  padding: 15px;
+  background: #f9f9f9;
+  border-radius: 8px;
+}
+
+/* Adjustments for Mobile */
 @media (max-width: 767px) {
-  .tikangainfo-title1,
-  .tikangainfo-title2,
-  .tikangainfo-title3 {
-    font-size: 1.2rem; /* Adjust font size */
-    margin-top: 3%; /* Adjust margin */
+  .tikangainfo-container {
+    flex-direction: column; /* Stack elements on smaller screens */
   }
 
-  .tikangainfo-para1,
-  .tikangainfo-para2,
-  .tikangainfo-para3 {
-    font-size: 1rem; /* Adjust font size */
-    width: 90%; /* Make paragraphs take more width on mobile */
+  .tikangainfo-section {
+    flex-direction: column; /* Stack elements on smaller screens */
+    align-items: center;
+  }
+
+  .tikangainfo-content,
+  .tikangainfo-images {
+    padding: 10px;
+    flex: none; /* Reset flex properties for mobile */
+  }
+
+  .tikangainfo-title,
+  .tikangainfo-text {
+    text-align: center; /* Center-align text on smaller screens */
+  }
+
+  .tikangainfo-image,
+  .tikangainfo-image2 {
+    max-width: 100%; /* Full width for images on smaller screens */
+  }
+
+  .tikangainfo-content,
+  .tikangainfo-image,
+  .tikangainfo-image2 {
+    flex-basis: 100%; /* Full width on smaller screens */
   }
 }
