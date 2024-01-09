@@ -9,7 +9,7 @@ export default function Tikangainfo() {
   useEffect(() => {
     gsap.utils
       .toArray(
-        ".tikangainfo-title, .tikangainfo-text, .tikangainfo-subtitle, .tikangainfo-subpara, .tikangainfo-image, .tikangainfo-image2"
+        ".tikangainfo-title, .tikangainfo-text, .tikangainfo-subtitle, .tikangainfo-subpara, .tikangainfo-image, .tikangainfo-image2, .kingi-image"
       )
       .forEach((section) => {
         gsap.from(section, {
@@ -27,17 +27,27 @@ export default function Tikangainfo() {
 
   return (
     <div className="tikangainfo-container">
-      {/* Intro Section */}
-      <h2 className="tikangainfo-title">
-        Welcome to the Historical Journey of Ngaa Marae Toopu
-      </h2>
-      <p className="tikangainfo-text">
-        Ngaa Marae Toopu, an organization dedicated to the unity and prosperity
-        of Marae in New Zealand, holds a rich history of collaboration,
-        leadership, and community engagement. This history is encapsulated in
-        the pivotal Tainui Conferences of 1976, which set the foundation for our
-        ongoing journey towards unity and cultural preservation.
-      </p>
+      <div className="tikangainfo-intro-section">
+        <div className="tikangainfo-intro-content">
+          {/* Intro Section */}
+          <h2 className="tikangainfo-title">
+            Welcome to the Historical Journey of Ngaa Marae Toopu
+          </h2>
+          <p className="tikangainfo-text">
+            Ngaa Marae Toopu, an organization dedicated to the unity and
+            prosperity of Marae in New Zealand, holds a rich history of
+            collaboration, leadership, and community engagement. This history is
+            encapsulated in the pivotal Tainui Conferences of 1976, which set
+            the foundation for our ongoing journey towards unity and cultural
+            preservation.
+          </p>
+        </div>
+        <img
+          src="./images/kingitanga.png"
+          alt="Head of the Movement"
+          className="kingi-image"
+        />
+      </div>
 
       {/* First Conference Section */}
       <div className="tikangainfo-section">
@@ -58,7 +68,7 @@ export default function Tikangainfo() {
           </h3>
           <p className="tikangainfo-subpara">
             This meeting was more than a gathering; it was a historic moment
-            aimed at unifying the Tainui People.
+            aimed at unifying all Marae across Aotearoa.
           </p>
 
           <h3 className="tikangainfo-subtitle">
@@ -138,7 +148,7 @@ export default function Tikangainfo() {
           </h3>
           <p className="tikangainfo-subpara">
             Discussions continued to emphasize unity under the leadership of Te
-            Arikinui and the values of the Tainui people.
+            Arikinui and the values of Maaori communities.
           </p>
           <h3 className="tikangainfo-subtitle">
             Management and Operational Decisions:
