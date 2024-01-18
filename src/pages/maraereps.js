@@ -12,9 +12,6 @@ export default function MaraeRepresentative({ maraeName, representatives }) {
           <p>
             <strong>Email:</strong> {rep.email}
           </p>
-          <p>
-            <strong>Contact Number:</strong> {rep.phone}
-          </p>
         </div>
       ))}
     </div>
