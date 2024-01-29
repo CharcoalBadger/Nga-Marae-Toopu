@@ -7,9 +7,13 @@
 }
 
 .iwt-image {
-  flex: 1; /* Allows the image to grow and shrink with the container */
+  flex: 0 0 auto; /* Adjust this to prevent stretching */
+  width: 30vw; /* Use viewport width for responsive sizing */
+  height: 30vw; /* Same as width to maintain the circle */
   object-fit: cover; /* Ensures images cover the area without being stretched */
-  max-height: 100%; /* Ensures the image height doesn't exceed the container height */
+  border-radius: 50%; /* Makes the image circular */
+  max-width: 500px; /* Maximum size */
+  max-height: 500px; /* Maximum size */
 }
 
 .iwt-text-content {
@@ -42,9 +46,10 @@
   }
 
   .iwt-image {
-    width: 100%; /* Full width of the container */
-    height: auto; /* Keep the aspect ratio of the image */
-    max-height: none; /* Removes the max-height restriction for mobile */
+    width: 50vw; /* Adjust size for smaller screens */
+    height: 50vw; /* Keep it equal to width */
+    max-width: 300px; /* Adjust maximum size for smaller screens */
+    max-height: 300px; /* Adjust maximum size for smaller screens */
   }
 
   .iwt-text-content {

@@ -28,7 +28,7 @@ export default function Home3() {
         Click below and join us on Facebook
       </h2>
       <a
-        href="https://www.facebook.com/ngaamaraetoopuu"
+        href="https://www.facebook.com/NgaaMaraeToopu"
         target="_blank"
         rel="noopener noreferrer"
         className="home3-animate"
