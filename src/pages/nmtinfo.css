@@ -16,9 +16,14 @@
   color: var(--body-text);
 }
 
+.nmtinfo-title {
+  color: var(--body-text);
+}
+
 .marae-name {
   font-size: 1.2em;
   margin-bottom: 10px;
+  text-align: center;
 }
 
 .rep-details {

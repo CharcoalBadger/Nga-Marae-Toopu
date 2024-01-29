@@ -10,155 +10,39 @@ export default function NMTinfo() {
   // Sample data
   const maraeRepresentatives = [
     {
-      maraeName: "Marae A",
+      maraeName: "Ngaati Hauaa",
       representatives: [
         {
-          firstName: "John",
-          lastName: "Doe",
-          email: "john@example.com",
-        },
-        {
-          firstName: "Jane",
-          lastName: "Doe",
-          email: "jane@example.com",
+          firstName: "Te Ao Marama",
+          lastName: "Maaka",
+          email: "maakateaomarama@gmail.com",
+          marae: "Kai a te mata",
         },
       ],
     },
     {
-      maraeName: "Marae b",
+      maraeName: "Ngaati Hauaa",
       representatives: [
         {
-          firstName: "John",
-          lastName: "Doe",
-          email: "john@example.com",
-        },
-        {
-          firstName: "Jane",
-          lastName: "Doe",
-          email: "jane@example.com",
+          firstName: "Kahurere Hilda",
+          lastName: "Clarke",
+          email: "bradleyhilda021951@gmail.com",
+          marae: "Rukumoana",
         },
       ],
     },
     {
-      maraeName: "Marae c",
+      maraeName: "Ngaati Hauaa",
       representatives: [
         {
-          firstName: "John",
-          lastName: "Doe",
-          email: "john@example.com",
-        },
-        {
-          firstName: "Jane",
-          lastName: "Doe",
-          email: "jane@example.com",
+          firstName: "Tumohe",
+          lastName: "Clarke",
+          email: "tumohe@gmail.com",
+          marae: "Kai a te mata",
         },
       ],
     },
-    {
-      maraeName: "Marae c",
-      representatives: [
-        {
-          firstName: "John",
-          lastName: "Doe",
-          email: "john@example.com",
-        },
-        {
-          firstName: "Jane",
-          lastName: "Doe",
-          email: "jane@example.com",
-        },
-      ],
-    },
-    {
-      maraeName: "Marae c",
-      representatives: [
-        {
-          firstName: "John",
-          lastName: "Doe",
-          email: "john@example.com",
-        },
-        {
-          firstName: "Jane",
-          lastName: "Doe",
-          email: "jane@example.com",
-        },
-      ],
-    },
-    {
-      maraeName: "Marae c",
-      representatives: [
-        {
-          firstName: "John",
-          lastName: "Doe",
-          email: "john@example.com",
-        },
-        {
-          firstName: "Jane",
-          lastName: "Doe",
-          email: "jane@example.com",
-        },
-      ],
-    },
-    {
-      maraeName: "Marae c",
-      representatives: [
-        {
-          firstName: "John",
-          lastName: "Doe",
-          email: "john@example.com",
-        },
-        {
-          firstName: "Jane",
-          lastName: "Doe",
-          email: "jane@example.com",
-        },
-      ],
-    },
-    {
-      maraeName: "Marae c",
-      representatives: [
-        {
-          firstName: "John",
-          lastName: "Doe",
-          email: "john@example.com",
-        },
-        {
-          firstName: "Jane",
-          lastName: "Doe",
-          email: "jane@example.com",
-        },
-      ],
-    },
-    {
-      maraeName: "Marae c",
-      representatives: [
-        {
-          firstName: "John",
-          lastName: "Doe",
-          email: "john@example.com",
-        },
-        {
-          firstName: "Jane",
-          lastName: "Doe",
-          email: "jane@example.com",
-        },
-      ],
-    },
-    {
-      maraeName: "Marae c",
-      representatives: [
-        {
-          firstName: "John",
-          lastName: "Doe",
-          email: "john@example.com",
-        },
-        {
-          firstName: "Jane",
-          lastName: "Doe",
-          email: "jane@example.com",
-        },
-      ],
-    },
+
     // Add more Marae and their representatives here
   ];
 

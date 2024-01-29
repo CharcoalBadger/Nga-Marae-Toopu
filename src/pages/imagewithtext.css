@@ -2,17 +2,18 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 60vh;
+  height: 60vh; /* Keep the container height relative to the viewport height */
   padding: 0 15%;
 }
 
 .iwt-image {
-  max-width: 50%;
-  height: auto;
+  flex: 1; /* Allows the image to grow and shrink with the container */
+  object-fit: cover; /* Ensures images cover the area without being stretched */
+  max-height: 100%; /* Ensures the image height doesn't exceed the container height */
 }
 
 .iwt-text-content {
-  max-width: 40%;
+  flex: 1; /* Gives equal space to the text content as the image */
   padding: 20px;
 }
 
@@ -40,10 +41,14 @@
     height: auto;
   }
 
-  .iwt-image,
+  .iwt-image {
+    width: 100%; /* Full width of the container */
+    height: auto; /* Keep the aspect ratio of the image */
+    max-height: none; /* Removes the max-height restriction for mobile */
+  }
+
   .iwt-text-content {
-    width: 100%;
-    max-width: 100%; /* Allow both image and text content to take full width */
+    width: 100%; /* Allow text content to take full width */
   }
 
   .iwt-title {

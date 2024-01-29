@@ -19,7 +19,7 @@ export default function NMT() {
       <div className="navbarapp-container">
         <Navbarapp />
       </div>
-      <div className="parallax3"></div>
+      <div className="parallax6"></div>
       <div className="nmt-title-container">
         <h1 className="nmt-title">Marae Representatives</h1>
         <hr className="nmt-title-divider" />

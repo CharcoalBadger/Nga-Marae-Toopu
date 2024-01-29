@@ -23,7 +23,7 @@ export default function Home2() {
 
   const items = [
     {
-      image: "./images/circle1.png",
+      image: "./images/ks2.jpg",
       title: "ABOUT US",
       subtext: "WHAKAHAERE",
       description:
@@ -31,7 +31,7 @@ export default function Home2() {
       linkName: "about",
     },
     {
-      image: "./images/circle2.jpg",
+      image: "./images/bnwkh2.png",
       title: "HISTORY",
       subtext: "HITORI",
       description:
@@ -39,7 +39,7 @@ export default function Home2() {
       linkName: "tikanga",
     },
     {
-      image: "./images/circle3.jpg",
+      image: "./images/bnwk3e.png",
       title: "EVENTS",
       subtext: "HUI",
       description:
@@ -47,7 +47,7 @@ export default function Home2() {
       linkName: "hne",
     },
     {
-      image: "./images/test15.png",
+      image: "./images/k4e.png",
       title: "MARAE REPS",
       subtext: "NGAA TOOPU MARAE",
       description:
