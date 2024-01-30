@@ -23,7 +23,7 @@ export default function Navbar() {
     <div className="navbar">
       <Link to="/">
         <img
-          src="./images/nmt-logo-t3.png"
+          src="./images/nmt-logo-white-ph.png"
           alt="Logo"
           className="navbar-logo"
         />

@@ -31,7 +31,7 @@ export default function Footer() {
           <p className="footer-animate">FOLLOW US</p>
           <div className="social-media footer-animate">
             <a
-              href="https://www.facebook.com/ngaamaraetoopuu"
+              href="https://www.facebook.com/NgaaMaraeToopu"
               target="_blank"
               rel="noopener noreferrer"
               className="footer-animate"
