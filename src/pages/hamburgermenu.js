@@ -74,8 +74,7 @@ export default function HamburgerMenu() {
             Events <div className="dropdown-separator"></div> Hui
           </Link>
           <Link to="/nmt" onClick={toggleMenu}>
-            <span className="navbar-item-subtext">Ngaa Toopu Kaumaatua</span>
-            <div className="dropdown-separator"></div>
+            Ngaa Toopu Kaumaatua <div className="dropdown-separator"></div>
           </Link>
         </div>
       </div>
