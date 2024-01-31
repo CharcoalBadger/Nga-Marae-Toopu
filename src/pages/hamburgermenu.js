@@ -48,7 +48,7 @@ export default function HamburgerMenu() {
       <div className="blackband"></div>
       <Link to="/">
         <img
-          src="./images/nmt-logo-t3.png"
+          src="./images/nmt-logo-white-ph.png"
           alt="Logo"
           className="hamburger-logo"
         />
@@ -74,8 +74,8 @@ export default function HamburgerMenu() {
             Events <div className="dropdown-separator"></div> Hui
           </Link>
           <Link to="/nmt" onClick={toggleMenu}>
-            Marae Representatives <div className="dropdown-separator"></div>{" "}
-            Ngaa Toopu Marae
+            <span className="navbar-item-subtext">Ngaa Toopu Kaumaatua</span>
+            <div className="dropdown-separator"></div>
           </Link>
         </div>
       </div>
