@@ -40,12 +40,12 @@ export default function Aboutapp() {
         imageOnRight={true}
       />
       <Imagewithtext
-        imageSrc="./images/placeholder.png"
+        imageSrc="./images/herewini.jpg"
         title="Deputy Chairperson Herewini Moana"
         description="Herewini Moana, serving as our Deputy Chairperson, is a pillar of strength and wisdom within Ngaa Marae Toopu. Herewini's role is crucial in supporting our Chairperson and overseeing key initiatives that drive our mission forward. His profound understanding of our traditions, combined with a forward-thinking mindset, ensures that our organization remains both grounded and progressive. Herewini is a champion of inclusivity, ensuring that every Marae's voice is heard and valued."
       />
       <Imagewithtext
-        imageSrc="./images/placeholder.png"
+        imageSrc="./images/marise2.jpg"
         title="Secretary Marise Bishop"
         description="Marise Bishop, our Secretary, is not only the organizational powerhouse behind Ngaa Marae Toopu but also a key facilitator of our external relationships. Her exceptional skills in administration and communication are vital in keeping our operations streamlined and effective. Beyond managing records and coordinating meetings, Marise plays an instrumental role in networking with Iwi leaders, other decision-makers, and external organizations. She ensures that the activities and decisions of Ngaa Marae Toopu are consistently aligned with the broader community’s needs and aspirations. Her commitment to our community's values is evident in her ability to bridge connections, foster collaborations, and maintain the unity of purpose that is central to our mission."
         imageOnRight={true}

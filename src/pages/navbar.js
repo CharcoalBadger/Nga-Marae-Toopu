@@ -52,9 +52,8 @@ export default function Navbar() {
         </Link>
         <Link to="/nmt" className="navbar-item">
           <div className="navbar-item-text">
-            Marae Representatives
+            <span className="navbar-item-subtext">Ngaa Toopu Kaumaatua</span>
             <hr className="navbar-item-divider" />
-            <span className="navbar-item-subtext">Ngaa Toopu Marae</span>
           </div>
         </Link>
       </div>

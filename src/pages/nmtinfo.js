@@ -52,7 +52,7 @@ export default function NMTinfo() {
     <div className="nmtinfo-container">
       {/* Existing content... */}
 
-      <h2 className="nmtinfo-title">Marae Representatives</h2>
+      <h2 className="nmtinfo-title">Ngaa Toopu Kaumaatua</h2>
 
       <div className="marae-reps-container">
         {" "}

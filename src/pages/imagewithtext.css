@@ -36,6 +36,10 @@
   flex-direction: row-reverse;
 }
 
+.imagewithtext:last-child {
+  padding-bottom: 50px; /* Adjust this value as needed */
+}
+
 /* Mobile Responsiveness */
 @media (max-width: 1024px) {
   .iwt-container {

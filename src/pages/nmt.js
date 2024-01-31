@@ -21,9 +21,8 @@ export default function NMT() {
       </div>
       <div className="parallax6"></div>
       <div className="nmt-title-container">
-        <h1 className="nmt-title">Marae Representatives</h1>
+        <h1 className="nmt-title-subtext">Ngaa Toopu Kaumaatua</h1>
         <hr className="nmt-title-divider" />
-        <h1 className="nmt-title-subtext">Ngaa Toopu Marae</h1>
       </div>
       <div className="scroll-arrow">
         <img src="./images/arrow-down.svg" alt="Scroll Down" />

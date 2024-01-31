@@ -43,26 +43,31 @@ export default function Home4() {
       title: "Ngaa Marae Toopu General Meeting",
       start: "2024-02-17",
       allDay: true,
+      color: "#9b59b6",
     },
     {
       title: "Ngaa Marae Toopu General Meeting",
       start: "2024-04-20",
       allDay: true,
+      color: "#9b59b6",
     },
     {
       title: "Ngaa Marae Toopu General Meeting",
       start: "2024-06-15",
       allDay: true,
+      color: "#9b59b6",
     },
     {
       title: "Ngaa Marae Toopu General Meeting",
       start: "2024-08-10",
       allDay: true,
+      color: "#9b59b6",
     },
     {
       title: "Ngaa Marae Toopu General Meeting",
       start: "2024-10-05",
       allDay: true,
+      color: "#9b59b6",
     },
     {
       title: "Ngaa Marae Toopu Christmas Function",
