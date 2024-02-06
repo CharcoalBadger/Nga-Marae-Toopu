@@ -51,7 +51,7 @@ export default function Aboutapp() {
         imageOnRight={true}
       />
       <Imagewithtext
-        imageSrc="./images/lillian.jpg"
+        imageSrc="./images/lillian3.jpg"
         title="Treasurer Lillian Pompey Paki"
         description="Lillian Pompey Paki, our Treasurer, brings exceptional financial acumen and a deep commitment to the sustainable growth of Ngaa Marae Toopu. Her expertise in financial management is central to our organization's ability to thrive and support our Marae effectively. Lillian’s approach to financial stewardship is marked by transparency, strategic planning, and a keen focus on the long-term goals of our community. Her dedication goes beyond financial oversight, reflecting a genuine passion for the well-being and success of our Marae."
       />
