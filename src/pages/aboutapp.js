@@ -55,12 +55,12 @@ export default function Aboutapp() {
         title="Treasurer Lillian Pompey Paki"
         description="Lillian Pompey Paki, our Treasurer, brings exceptional financial acumen and a deep commitment to the sustainable growth of Ngaa Marae Toopu. Her expertise in financial management is central to our organization's ability to thrive and support our Marae effectively. Lillian’s approach to financial stewardship is marked by transparency, strategic planning, and a keen focus on the long-term goals of our community. Her dedication goes beyond financial oversight, reflecting a genuine passion for the well-being and success of our Marae."
       />
-      {/* <Imagewithtext
-        imageSrc="./images/placeholder.png"
+      <Imagewithtext
+        imageSrc="./images/Anne.jpg"
         title="Assistant Treasurer Ana Haenga"
         description="Ana Haenga serves as our Assistant Treasurer, playing a vital role in managing and safeguarding our organization's financial resources. Ana's skill set in financial operations and her keen analytical abilities are indispensable to our team. Working in tandem with the Treasurer, she ensures that our financial strategies are robust and effective. Ana's meticulous attention to detail and her dedication to fiscal responsibility make her an invaluable asset to Ngaa Marae Toopu."
         imageOnRight={true}
-      /> */}
+      />
       <Footer />
     </div>
   );

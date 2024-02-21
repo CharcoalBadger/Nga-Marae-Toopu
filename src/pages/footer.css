@@ -43,7 +43,8 @@
 .access-link,
 .cookie-link,
 .social-media a,
-.credit-link {
+.credit-link,
+.credits-button {
   color: white;
   text-decoration: none;
   margin: 0; /* Resetting the default margin */
@@ -54,7 +55,8 @@
 .cookie-link:hover,
 .access-link:hover,
 .social-media a:hover,
-.credit-link:hover {
+.credit-link:hover,
+.credits-button:hover {
   text-decoration: underline;
 }
 

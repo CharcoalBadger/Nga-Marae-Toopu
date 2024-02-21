@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import "./footer.css";
+import CreditsModal from "./creditmodal";
 
 export default function Footer() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <div className="footer-container">
+      <CreditsModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+      />
       <div className="footer-content footer-animate">
         <div className="left-section footer-animate">
           <a
@@ -45,6 +51,22 @@ export default function Footer() {
           </div>
         </div>
         <div className="right-section footer-animate">
+          <button
+            className="credits-button footer-animate"
+            onClick={() => setIsModalOpen(true)}
+            style={{
+              background: "none",
+              border: "none",
+              color: "white",
+              padding: 0,
+              font: "inherit",
+              cursor: "pointer",
+              outline: "inherit",
+              marginBottom: "20px",
+            }}
+          >
+            Image Credits
+          </button>
           <a
             href="/accessibility-statement"
             target="_blank"
